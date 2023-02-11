@@ -33,3 +33,18 @@ def cool_poem():
     </body>
 </html>'''
 
+@app.route('/songs')
+def songs():
+    songs = [
+        {'artist': {'creator':'the who'},
+         'song': 'slip kid'
+        },
+        {'artist': {'creator':'kanye'},
+         'song': 'flashing lights'
+        },
+        {'artist': {'creator':'charles griffes'},
+         'song': 'the white peacock'
+        }
+    ]
+    return render_template('songs.html', title='my_songs', songs=songs)
+

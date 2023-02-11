@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1> Here are songs I like! </h1>
+	{% for songs in songs %}
+	<div><p>{{songs.artist.creator}} created: <b>{{songs.song}}</b></p></div>
+	{% endfor %}
+{% endblock %}
