@@ -8,8 +8,17 @@
       {% endif %}
     </head>
     <body>
-        <div>Microblog: <a href="/index">Home</a> <a href="/cool_poem">Cool Poem</a> <a href ="/songs">Songs I like</a></div>o
+        <div>Microblog: <a href={{url_for('login')}}">Login</a> <a href="{{url_for('index')}}">Home</a> <a href="{{url_for('cool_poem')}}">Cool Poem</a> <a href ="{{url_for('songs')}}">Songs I like</a></div>
         <hr>
+         {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>
