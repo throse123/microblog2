@@ -1,0 +1,8 @@
+{% extends "base.html"%}
+
+{% block content%}
+	<h1> Here is the quote of the day! </h1>
+	{% for quote_storage in quotes %}
+	<div><p>{{random.choice(random_quotes)}}</p></div>
+	{% endfor %}
+{% endblock %}
