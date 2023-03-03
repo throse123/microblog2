@@ -21,10 +21,9 @@
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('explore') }}">Explore</a></li>
                     <li><a href="{{ url_for('cool_poem') }}">Cool Poem</a></li>
-                    <li><a href="{{ url_for('songs') }} ">Songs</a></li>
+                    <li><a href="{{ url_for('songs') }} ">Songs I like</a></li>
                     <li><a href="{{ url_for('quotes') }}">Quotes</a></li>
                     <li><a href="{{ url_for('logout')}} ">Logout</a></li>
-
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
